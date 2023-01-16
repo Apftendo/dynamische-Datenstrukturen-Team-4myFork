@@ -65,11 +65,11 @@ public class ModenormalGui extends JFrame implements ActionListener{
         this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         //Icons für Joker
-        Icon joker50 = new ImageIcon("src/main/java/de/hebk/images/icons/50-50.png");
+        Icon joker50 = new ImageIcon("src/main/java/de/hebk/images/icons/img_3.png");
         joker1.setIcon(joker50);
-        Icon jokertele = new ImageIcon("src/main/java/de/hebk/images/icons/tele.png");
+        Icon jokertele = new ImageIcon("src/main/java/de/hebk/images/icons/img_1.png");
         joker2.setIcon(jokertele);
-        Icon jokeraudience = new ImageIcon("src/main/java/de/hebk/images/icons/audience.png");
+        Icon jokeraudience = new ImageIcon("src/main/java/de/hebk/images/icons/img_2.png");
         joker3.setIcon(jokeraudience);
         antwort1.addActionListener(this);
         antwort2.addActionListener(this);

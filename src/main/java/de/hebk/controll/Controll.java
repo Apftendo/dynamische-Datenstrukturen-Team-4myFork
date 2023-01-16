@@ -45,7 +45,7 @@ public class Controll {
         }else if(pGamemode instanceof ModeJeopardy){
             if(game.getUser()[1] == null){
                 showLogin();
-            }
+            }else{
                 String[] topics = new String[]{"Erdkunde","Fangfrage","Musik","Filme","Naturwissenschaften","Geschichte","Wissenschaft"};
                 List<String> list = new List<>();
                 for(int i = 0; i < topics.length; i++){
@@ -66,6 +66,7 @@ public class Controll {
             }
         }
     }
+
 
     /**
      * öffnet das Menu

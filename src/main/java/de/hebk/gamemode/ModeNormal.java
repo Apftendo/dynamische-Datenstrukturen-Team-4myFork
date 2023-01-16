@@ -166,17 +166,6 @@ public class ModeNormal extends Gamemode {
 
 
     /**
-     *
-     */
-    @Override
-    /**
-     * startet denn Gamemode
-     */
-    public void start() {
-        randomQuestion(null);
-    }
-
-    /**
      * liefert das aktuelle Geld zurück
      * @return
      */

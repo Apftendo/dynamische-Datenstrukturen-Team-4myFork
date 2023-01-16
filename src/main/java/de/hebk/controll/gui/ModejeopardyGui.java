@@ -2,6 +2,8 @@ package de.hebk.controll.gui;
 
 import de.hebk.controll.Controll;
 import de.hebk.gamemode.Gamemode;
+import de.hebk.user.User;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -48,7 +50,7 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     private JButton answers2;
     private JLabel team1;
     private JLabel team2;
-    private JPanel point1;
+    private JLabel point1;
     private JLabel point2;
     private JPanel panel1;
     private JPanel panel2;
@@ -58,6 +60,10 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     private JPanel points;
     private JButton homebutton;
     private JPanel home;
+    private JPanel team1point;
+    private JPanel team2point;
+    private JLabel points2;
+    private JLabel points1;
 
 
     /**
@@ -68,7 +74,7 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
      * @param pTopics
      * @param user2
      */
-    public ModejeopardyGui(Controll pCtrl, Gamemode pGamemode ,String pTitel, String[] pTopics,User user2){
+    public ModejeopardyGui(Controll pCtrl, Gamemode pGamemode , String pTitel, String[] pTopics, User user2){
         super(pTitel);
         ctrl = pCtrl;
         gamemode = pGamemode;
@@ -80,6 +86,7 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         generateTopicLabel(pTopics);
         disabletextAnswers();
+        question.setVisible(false);
         first100.addActionListener(this);
         first200.addActionListener(this);
         first300.addActionListener(this);
@@ -166,8 +173,7 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
             generateQuestion(topic4.getText(), 3);
             ((JButton) event.getSource()).setVisible(false);
             point = Integer.parseInt(((JButton) event.getSource()).getText());
-        }
-        if(event.getSource() == answers1 || event.getSource() == answers2 || event.getSource() == answers3 || event.getSource() == answers4){
+        }else if(event.getSource() == answers1 || event.getSource() == answers2 || event.getSource() == answers3 || event.getSource() == answers4){
             if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
                 disabletextAnswers();
                 question.setText("Diese Antwort ist Richtig!");
@@ -217,7 +223,6 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
      * Methode um die Antwortmöglichkeiten nicht Sichtbar zu machen
      */
     private void disabletextAnswers(){
-        question.setVisible(false);
         answers1.setVisible(false);
         answers2.setVisible(false);
         answers3.setVisible(false);
@@ -232,13 +237,15 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
      */
     private void pointCounter(int pPoints){
         ctrl.getGame().getGamemode().setCurrentQuestion(null);
+        System.out.println(ctrl.getGame().getUser()[0].getPoints());
         if(currentPlayer == ctrl.getGame().getUser()[0]){
             ctrl.getGame().getUser()[0].setPoints(ctrl.getGame().getUser()[0].getPoints() + pPoints);
-            point1.setText(String.valueOf(ctrl.getGame().getUser()[0].getPoints())+ " Punkte");
+            System.out.println(ctrl.getGame().getUser()[0].getPoints());
+            points1.setText(String.valueOf(ctrl.getGame().getUser()[0].getPoints())+ " Punkte");
             currentPlayer = ctrl.getGame().getUser()[1];
         }else if(currentPlayer == ctrl.getGame().getUser()[1]){
             ctrl.getGame().getUser()[1].setPoints(ctrl.getGame().getUser()[1].getPoints() + pPoints);
-            point2.setText(String.valueOf(ctrl.getGame().getUser()[1].getPoints())+ " Punkte");
+            points2.setText(String.valueOf(ctrl.getGame().getUser()[1].getPoints())+ " Punkte");
             currentPlayer = ctrl.getGame().getUser()[0];
         }
     }

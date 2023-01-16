@@ -16,7 +16,6 @@ public abstract class Gamemode {
     public Stack<Questions> modeSurvive;
     public Queue<Questions> modeJeopardy;
     public abstract void useJoker(int pInput);
-    public abstract void start();
     public abstract void jokerHinzufuegen(Joker pJoker);
     public abstract boolean checkcorrect(String pAnswer);
     public abstract void randomQuestion(String pContext);

@@ -33,6 +33,7 @@ public class ModesurviveGui extends JFrame implements ActionListener {
         super(ptitle);
         ctrl = pControll;
         this.gamemode = pGamemode;
+        gamemode.randomQuestion(null);
         generateLabelButtontext();
         button1.addActionListener(this);
         button2.addActionListener(this);
@@ -50,7 +51,6 @@ public class ModesurviveGui extends JFrame implements ActionListener {
      * Generiert die Buttons mit den Texten und Back/Foregrounds
      */
     private void generateLabelButtontext() {
-        gamemode.start();
         textArea2.setText(gamemode.getCurrentQuestion().getQuestion());
         textArea2.setBackground(new Color(3,37,126));
         textArea2.setForeground(Color.white);
@@ -81,7 +81,7 @@ public class ModesurviveGui extends JFrame implements ActionListener {
                 count++;
                 ctrl.getGame().getUser()[0].setCount(count);
                 textArea1.setText("Deine Punktzahl: "+ count);
-                gamemode.start();
+                gamemode.randomQuestion(null);
                 try {
                     generateLabelButtontext();
                 } catch(Exception ie) {

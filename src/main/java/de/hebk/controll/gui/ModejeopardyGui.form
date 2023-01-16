@@ -482,62 +482,66 @@
         </properties>
         <border type="none"/>
         <children>
-          <grid id="45fdf" binding="pointteam1" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="300a8" binding="team1point" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-16776639"/>
+              <background color="-17660"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="e28c4" class="javax.swing.JLabel" binding="team1">
+              <component id="f0ccd" class="javax.swing.JLabel" binding="team1">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <foreground color="-262154"/>
-                  <text value="Team 1 Punkte "/>
+                  <background color="-17660"/>
+                  <foreground color="-16777216"/>
+                  <text value="Label"/>
                 </properties>
               </component>
-              <component id="9447e" class="javax.swing.JLabel" binding="point1">
+              <component id="ba064" class="javax.swing.JLabel" binding="points1">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <background color="-262154"/>
-                  <foreground color="-262154"/>
+                  <background color="-17660"/>
+                  <foreground color="-16777216"/>
                   <text value="0 Punkte"/>
                 </properties>
               </component>
             </children>
           </grid>
-          <grid id="2e56c" binding="pointteam2" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="38fe" binding="team2point" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-16776639"/>
+              <background color="-17660"/>
+              <foreground color="-8232958"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="7af8f" class="javax.swing.JLabel" binding="team2">
+              <component id="6f7ab" class="javax.swing.JLabel" binding="team2">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <foreground color="-262154"/>
-                  <text value="Team 2 Punkte"/>
+                  <background color="-17660"/>
+                  <foreground color="-16777216"/>
+                  <text value="Label"/>
                 </properties>
               </component>
-              <component id="bec32" class="javax.swing.JLabel" binding="point2">
+              <component id="f3504" class="javax.swing.JLabel" binding="points2">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <foreground color="-262154"/>
+                  <background color="-17660"/>
+                  <foreground color="-16777216"/>
                   <text value="0 Punkte"/>
                 </properties>
               </component>

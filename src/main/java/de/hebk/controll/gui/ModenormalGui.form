@@ -306,7 +306,6 @@
               <hideActionText value="true"/>
               <horizontalAlignment value="2"/>
               <horizontalTextPosition value="0"/>
-              <icon value="de/hebk/images/icons/img_3.png"/>
               <text value=""/>
             </properties>
           </component>
@@ -319,7 +318,6 @@
               <background color="-16776639"/>
               <horizontalAlignment value="2"/>
               <horizontalTextPosition value="0"/>
-              <icon value="de/hebk/images/icons/img_1.png"/>
               <text value=""/>
             </properties>
           </component>
@@ -332,7 +330,6 @@
               <background color="-16776639"/>
               <horizontalAlignment value="2"/>
               <horizontalTextPosition value="0"/>
-              <icon value="de/hebk/images/icons/img_2.png"/>
               <text value=""/>
             </properties>
           </component>
