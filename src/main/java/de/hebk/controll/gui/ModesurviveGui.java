@@ -62,6 +62,7 @@ public class ModesurviveGui extends JFrame implements ActionListener {
         button2.setForeground(Color.white);
         button3.setForeground(Color.white);
         button4.setForeground(Color.white);
+        gamemode.getCurrentQuestion().randomAnswers();
         button1.setText(gamemode.getCurrentQuestion().getAnswers()[0]);
         button2.setText(gamemode.getCurrentQuestion().getAnswers()[1]);
         button3.setText(gamemode.getCurrentQuestion().getAnswers()[2]);
